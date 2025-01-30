@@ -1,14 +1,127 @@
 @font-face {
-  font-family: Roboto;
+  font-family: "Roboto";
   src: url("./assets/fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
-  font-family: Roboto-bold;
+  font-family: "Roboto-bold";
   src: url("./assets/fonts/Roboto-Bold.ttf");
 }
 
 :root {
-  --tipo-principal: Helvetica, Arial, sans-serif;
-  --tipo-secundaria: Verdana;
+  --tipo-principal: "Roboto", Helvetica, Arial, sans-serif;
+  --tipo-secundaria: "Roboto-bold", Verdana;
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+img {
+  min-width: 100%;
+}
+
+html {
+  color: var(--dark-slate-grey);
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--tipo-principal);
+}
+
+.container {
+  max-width: 507px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 2em;
+}
+
+.info {
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+}
+
+.info__title {
+  font-family: "Roboto-bold";
+  font-size: 3.8rem;
+}
+
+.info__description {
+  line-height: 1.6;
+}
+
+.info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  list-style: none;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+}
+
+.list__item > span {
+  align-self: flex-start;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("/assets/images/favicon-32x32.png");
+  margin-right: 1em;
+}
+
+.info__form {
+  margin-bottom: 2em;
+}
+
+label,
+input {
+  display: block;
+}
+
+.info__form label {
+  margin-bottom: 0.8em;
+  font-family: var(--tipo-secundaria);
+  font-size: 1.2rem;
+}
+
+.info__form input {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1.4em 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.info__form input:first-child::placeholder {
+  content: "";
+  color: var(--grey);
+}
+
+.info__form .cta {
+  font-family: var(--tipo-secundaria);
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: unset;
+  }
 }

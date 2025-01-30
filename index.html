@@ -20,28 +20,48 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- Sign-up form start -->
+    <div class="container">
+      <header class="hero">
+        <img src="/assets/images/illustration-sign-up-mobile.svg" alt="" />
+      </header>
 
-    Stay updated! Join 60,000+ product managers receiving monthly updates on:
-    Product discovery and building what matters Measuring to ensure updates are
-    a success And much more! Email address email@company.com Subscribe to
-    monthly newsletter
+      <main class="info">
+        <h1 class="info__title">Stay updated!</h1>
 
-    <!-- Sign-up form end -->
+        <p class="info__description">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
 
-    <!-- Success message start -->
+        <ul class="info__list">
+          <li class="list__item">
+            <span></span> Product discovery and building what matters
+          </li>
+          <li class="list__item">
+            <span></span> Measuring to ensure updates are a success
+          </li>
+          <li class="list__item"><span></span> And much more!</li>
+        </ul>
 
-    Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message
-
-    <!-- Success message end -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+        <form action="#" class="info__form">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@company.com"
+          />
+          <input
+            class="cta"
+            type="submit"
+            value="Subscribe to monthly newsletter"
+          />
+        </form>
+      </main>
     </div>
   </body>
 </html>
+<!-- Success message start -->
+
+<!-- Thanks for subscribing! A confirmation email has been sent to
+ash@loremcompany.com. Please open it and click the button inside to confirm
+your subscription. Dismiss message -->
