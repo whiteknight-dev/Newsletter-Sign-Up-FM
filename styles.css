@@ -36,6 +36,10 @@ body {
   font-family: var(--tipo-principal);
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 507px;
   margin: 0 auto;
@@ -83,7 +87,8 @@ body {
   width: 32px;
   height: 32px;
   background: url("/assets/images/favicon-32x32.png");
-  margin-right: 1em;
+  background-size: cover;
+  margin-right: 16px;
 }
 
 .info__form {
@@ -91,7 +96,8 @@ body {
 }
 
 label,
-input {
+input,
+a {
   display: block;
 }
 
@@ -116,13 +122,61 @@ input {
 }
 
 .info__form .cta {
+  margin-bottom: 2rem;
+  padding: 1.4em 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
   font-family: var(--tipo-secundaria);
+  font-size: 1.4rem;
   background-color: var(--dark-slate-grey);
   color: var(--white);
+  text-align: center;
   transition: background 500ms;
 }
 
 .info__form .cta:hover {
+  background-color: var(--tomato);
+}
+
+/* Success Page Styles */
+.scs-container {
+  height: 650px;
+  margin: 0 auto;
+  padding: 4em 1.4em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scs-info img {
+  display: inline-block;
+  margin-bottom: 2em;
+  width: 64px;
+}
+
+.scs-info h1 {
+  font-family: var(--tipo-secundaria);
+  margin-bottom: 0.8em;
+}
+
+.scs-info p span {
+  font-family: var(--tipo-secundaria);
+}
+
+.scs-container .return-btn {
+  padding: 1.4em 2em;
+  font-family: var(--tipo-secundaria);
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--dark-slate-grey);
+  border-radius: 8px;
+  transition: background 500ms;
+  cursor: pointer;
+}
+
+.scs-container .return-btn:hover {
   background-color: var(--tomato);
 }
 
@@ -134,9 +188,10 @@ input {
   }
 
   .container {
-    width: 100%;
+    width: 70%;
     max-width: 820px;
-    height: 80vh;
+    height: 90vh;
+    max-height: 534px;
     padding: 1em;
     display: flex;
     flex-direction: row-reverse;
@@ -145,9 +200,10 @@ input {
   }
 
   .hero {
-    width: 80%;
+    width: 75%;
     height: auto;
     margin-bottom: 0;
+    justify-self: flex-start;
     flex-grow: 1;
     background: url("/assets/images/illustration-sign-up-desktop.svg") no-repeat;
     background-size: contain;
@@ -156,7 +212,7 @@ input {
   }
 
   .info {
-    width: 90%;
+    width: 100%;
     flex-grow: 4;
     justify-content: center;
     gap: unset;
@@ -174,5 +230,23 @@ input {
 
   .info__form {
     margin-bottom: 0;
+  }
+
+  /* Success Page Styles */
+  .scs-container {
+    max-width: 475px;
+    height: 475px;
+    padding: 2.8em 3.4em;
+    background-color: var(--white);
+    border-radius: 30px;
+  }
+
+  .scs-info img {
+    margin-bottom: 1.6em;
+  }
+
+  .scs-info h1 {
+    margin-bottom: 0.6em;
+    font-size: 4.4rem;
   }
 }
