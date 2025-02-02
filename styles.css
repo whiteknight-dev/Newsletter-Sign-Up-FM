@@ -77,18 +77,16 @@ a {
 
 .list__item {
   display: flex;
-  align-items: center;
+  gap: 16px;
   line-height: 1.6;
 }
 
 .list__item > span {
-  align-self: flex-start;
-  display: inline-block;
   width: 32px;
   height: 32px;
-  background: url("/assets/images/favicon-32x32.png");
-  background-size: cover;
-  margin-right: 16px;
+  flex-shrink: 0;
+  background: url("/assets/images/check_circle_google-icon-32px.svg") no-repeat;
+  background-size: contain;
 }
 
 .info__form {
@@ -226,6 +224,10 @@ a {
   .info__list {
     margin-bottom: 1.2em;
     gap: 0.2em;
+  }
+
+  .list__item {
+    align-items: center;
   }
 
   .info__form {
