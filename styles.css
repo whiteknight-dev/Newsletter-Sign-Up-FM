@@ -120,16 +120,9 @@ a {
 }
 
 .info__form .cta {
-  margin-bottom: 2rem;
-  padding: 1.4em 1em;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  cursor: pointer;
   font-family: var(--tipo-secundaria);
-  font-size: 1.4rem;
   background-color: var(--dark-slate-grey);
   color: var(--white);
-  text-align: center;
   transition: background 500ms;
 }
 
