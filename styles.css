@@ -12,6 +12,7 @@
   --tipo-principal: "Roboto", Helvetica, Arial, sans-serif;
   --tipo-secundaria: "Roboto-bold", Verdana;
   --tomato: hsl(4, 100%, 67%);
+  --tomato-opacity: #ff625733;
   --dark-slate-grey: hsl(234, 29%, 20%);
   --charcoal-grey: hsl(235, 18%, 26%);
   --grey: hsl(231, 7%, 60%);
@@ -99,10 +100,21 @@ a {
   display: block;
 }
 
+.info__form .form__label {
+  display: flex;
+  justify-content: space-between;
+}
+
 .info__form label {
   margin-bottom: 0.8em;
   font-family: var(--tipo-secundaria);
   font-size: 1.2rem;
+}
+
+.form__label .form-messages {
+  font-size: 1.2rem;
+  color: var(--tomato);
+  transition: all 300ms ease;
 }
 
 .info__form input {
@@ -117,6 +129,12 @@ a {
 .info__form input:first-child::placeholder {
   content: "";
   color: var(--grey);
+}
+
+.info__form .email.error {
+  color: var(--tomato);
+  background-color: var(--tomato-opacity);
+  border: 1px solid var(--tomato);
 }
 
 .info__form .cta {

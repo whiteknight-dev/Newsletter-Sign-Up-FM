@@ -17,6 +17,7 @@
     </title>
 
     <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./main.js"></script>
   </head>
   <body>
     <div class="container">
@@ -40,13 +41,16 @@
         </ul>
 
         <form action="success.html" class="info__form">
-          <label for="email">Email address</label>
+          <div class="form__label">
+            <label for="email">Email address</label>
+            <span class="form-messages"></span>
+          </div>
           <input
-            type="email"
+            type="text"
             name="email"
             id="email"
+            class="email"
             placeholder="email@company.com"
-            required
           />
 
           <input
